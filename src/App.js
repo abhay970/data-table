@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+ import ReactDataTable from './components/ReactDataTable';
+ import sampleData from './components/sampleData';
 import './App.css';
 
+
+const COLUMNS=[
+  {
+    title: "First Name",
+    field: "firstName"
+  },
+  {
+    title: "Last Name",
+    field: "lastName"
+  },
+  {
+    title: "Martial Status",
+    field: "status"
+  },
+  {
+    title: "Date of Birth",
+    field: "year"
+  }
+]
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   return (
+   <ReactDataTable data={sampleData} columns={COLUMNS} />
   );
 }
 
